@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-// const rapidApiKey = import.meta.env.VITE_RAPID_API_ARTICLE_KEY;
+const rapidApiKey = import.meta.env.VITE_RAPID_API_ARTICLE_KEY;
 
 export const articleApi = createApi({
     reducerPath: 'articleApi',
@@ -8,7 +8,7 @@ export const articleApi = createApi({
         baseUrl: 'https://article-extractor-and-summarizer.p.rapidapi.com/',
         prepareHeaders: (headers) => {
             // 'X-RapidAPI-Key': 'f467cd89cdmshe88277c8f46cb91p18bf47jsn5979f1de89cd',
-            headers.set('X-RapidAPI-Key', 'f467cd89cdmshe88277c8f46cb91p18bf47jsn5979f1de89cd');
+            headers.set('X-RapidAPI-Key', rapidApiKey);
             headers.set('X-RapidAPI-Host', 'article-extractor-and-summarizer.p.rapidapi.com');
 
             return headers;
